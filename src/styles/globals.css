@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 @font-face {
   font-family: 'inter';
-  src: local('MyFont'), url(/font/Intra-Regular-Plus.ttf.ttf) format('woff');
+  src: local('MyFont'), url(/font/Intra-Regular-Plus.ttf) format('woff');
   /* other formats include: 'woff2', 'truetype, 'opentype',
                             'embedded-opentype', and 'svg' */
 }
