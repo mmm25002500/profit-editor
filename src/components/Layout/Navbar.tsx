@@ -64,7 +64,7 @@ const Navbar = () => {
     },
     {
       title: "加密貨幣獲利單",
-      href: "/crypto",
+      href: "/crypto/Pionex",
       icon: faLandmark,
     },
     {

@@ -58,15 +58,17 @@ const BasedPage = forwardRef((props: Props, ref) => {
 
 		if (imageLoaded && canvas) {
 			const image = imageRef.current!;
-			canvas.width = image.width / 2;
-			canvas.height = image.height / 2;
+			canvas.width = image.width;
+			canvas.height = image.height;
 
 			// 繪製圖片
 			ctx?.drawImage(image, 0, 0, canvas.width, canvas.height);
+			// ctx?.canvas.width = 0;
+			// ctx?.canvas.height = 0;
 
 			// 增加文字
 			if (ctx) {
-				props.drawWithText(ctx, content);
+				props.drawWithText(ctx, content, 2);
 			}
 
 			// 使用 canvas.toDataURL() 將 canvas 轉換為 base64 格式的圖片數據
@@ -95,15 +97,15 @@ const BasedPage = forwardRef((props: Props, ref) => {
 
 		if (imageLoaded && canvas) {
 			const image = imageRef.current!;
-			canvas.width = image.width / 2;
-			canvas.height = image.height / 2;
+			canvas.width = image.width;
+			canvas.height = image.height;
 
 			// 繪製圖片
 			ctx?.drawImage(image, 0, 0, canvas.width, canvas.height);
 
 			// 增加文字
 			if (ctx) {
-				props.drawWithText(ctx, content);
+				props.drawWithText(ctx, content, 2);
 			}
 		}
 	};
@@ -120,6 +122,7 @@ const BasedPage = forwardRef((props: Props, ref) => {
 			<canvas
 				ref={canvasRef}
 				style={{ border: "1px solid black" }}
+				className="w-64 sm:w-72 md:w-80 m-auto"
 			/>
 		</>
 	)
